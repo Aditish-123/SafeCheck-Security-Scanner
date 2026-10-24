@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+*.db
+*.sqlite
+*.sqlite3
+data/
+*.log
+.pytest_cache/
+*.backup
+*.before_history

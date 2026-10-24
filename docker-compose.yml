@@ -1,0 +1,16 @@
+services:
+  clamav:
+    image: clamav/clamav:stable
+    container_name: clamav
+    restart: unless-stopped
+
+  app:
+    build: ./app
+    container_name: safecheck-app
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    depends_on:
+      - clamav
+    volumes:
+      - ./data:/app/data
